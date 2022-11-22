@@ -13,11 +13,11 @@ if [ ! -f /etc/xray/config.json ]; then
 	cp /etc/xray/config.init /etc/xray/config.json
 	sed -i "s/PORT/$PORT/g" /etc/xray/config.json
 	sed -i "s/UUID/$UUID/g" /etc/xray/config.json
-	sed -i "s/DEST/$DEST/g" /etc/xray/config.json
+	sed -i "s/H2PATH/$H2PATH/g" /etc/xray/config.json
+	sed -i "s/DOMAIN/$DOMAIN/g" /etc/xray/config.json
 	echo "Xray Initialized"
 	echo "UUID:$UUID"
-	echo "Listening at 0.0.0.0:$PORT"
-	echo "Fallback to $DEST"
+	echo "Listening at $DOMAIN:$PORT/$H2PATH"
 fi
 
 exec "$@"

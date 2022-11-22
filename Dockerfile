@@ -19,7 +19,8 @@ RUN set -ex \
   && rm -rf /tmp/* /var/cache/apk/*
 
 ENV PORT 8080
-ENV DEST localhost:80
+ENV H2PATH=
+ENV DOMAIN=
 
 WORKDIR /etc/xray
 
