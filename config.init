@@ -14,12 +14,13 @@
                   "id":"UUID"
                }
             ],
-            "decryption":"none",
-            "fallbacks":[
-                    {
-                        "dest":"DEST"
-                    }
-                ]
+            "decryption":"none"
+         },
+         "streamSettings":{
+            "network":"grpc",
+            "grpcSettings":{
+               "serviceName":"SERVICE"
+            }
          }
       }
    ],
